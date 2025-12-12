@@ -11,3 +11,6 @@ The model generates a **0–4 DR Score** from a single X-ray using a Spatial–R
 - Training pipeline (MOST + OAI)  
 - External evaluation (MenTOR, KICK)  
 - Lightweight script for daily inference
+
+## DR Model (trained model with best performance)
+https://mega.nz/file/biRRDRLL#BPT-AHqsNX5utshvNw9yea5Gj5Hh1VWI9NQtEMChh-g
