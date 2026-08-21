@@ -1,0 +1,11 @@
+# Dataset names are retained for reproducibility. No cohort-specific paths,
+# identifiers, credentials, or private extraction logic are distributed.
+datasets:
+  OAI:
+    metadata_csv: /path/to/private/OAI_metadata.csv
+  MOST:
+    metadata_csv: /path/to/private/MOST_metadata.csv
+  KICK:
+    metadata_csv: /path/to/private/KICK_metadata.csv
+  MenTOR:
+    metadata_csv: /path/to/private/MenTOR_metadata.csv

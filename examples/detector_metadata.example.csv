@@ -1,0 +1,3 @@
+participant_id,cohort,image_path,annotation_path,split
+EXAMPLE_TRAIN_001,OAI,/private/path/bilateral_train.png,/private/path/bilateral_train.json,train
+EXAMPLE_TEST_001,MOST,/private/path/bilateral_test.png,/private/path/bilateral_test.json,test

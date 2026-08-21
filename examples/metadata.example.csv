@@ -1,0 +1,5 @@
+cohort,participant_id,knee_id,side,image_path,time_months,event
+OAI,OAI_EXAMPLE_001,OAI_EXAMPLE_001_L,left,/private/path/OAI/example_left.png,108,0
+MOST,MOST_EXAMPLE_001,MOST_EXAMPLE_001_R,right,/private/path/MOST/example_right.png,36,1
+KICK,KICK_EXAMPLE_001,KICK_EXAMPLE_001_L,left,/private/path/KICK/example_left.png,60,0
+MenTOR,MENTOR_EXAMPLE_001,MENTOR_EXAMPLE_001_R,right,/private/path/MenTOR/example_right.png,24,1

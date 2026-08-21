@@ -1,0 +1,44 @@
+# Local data and generated outputs
+data/*
+!data/README.md
+outputs/
+logs/
+runs/
+
+# Downloaded and locally trained model weights
+*.pt
+*.ckpt
+*.pth
+*.sav
+
+# Images and medical-image containers must never be committed.
+*.dcm
+*.dicom
+*.nii
+*.nii.gz
+*.mha
+*.mhd
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+!docs/*.png
+!examples/synthetic_bilateral_knee_example.png
+
+# Python and notebook state
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+.jupyter/
+.venv/
+build/
+dist/
+*.egg-info/
+
+# Editors and operating systems
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

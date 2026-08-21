@@ -1,0 +1,62 @@
+data:
+  metadata_csv: data/metadata.csv
+  allowed_cohorts: [OAI, MOST, KICK, MenTOR]
+  participant_column: participant_id
+  knee_column: knee_id
+  cohort_column: cohort
+  image_column: image_path
+  side_column: side
+  time_column: time_months
+  event_column: event
+
+preprocessing:
+  image_size: 630
+  grayscale: true
+  reflect_right_knee: true
+  clahe_clip_limit: 2.0
+  clahe_tile_grid: [8, 8]
+  normalization: per_image_z_score
+  physical_spacing_resampling: false
+
+model:
+  grid_size: 7
+  patch_size: 90
+  patch_encoder_size: 224
+  feature_encoder: resnet18_imagenet
+  feature_embedding_size: 512
+  attention_embedding_size: 256
+  representational_neighbors: 5
+  spatial_radius: 1
+  positional_encoding: true
+
+training:
+  outer_folds: 5
+  validation_fraction_of_development: 0.125
+  primary_seed: 1029
+  sensitivity_seeds: [2029, 3029]
+  batch_size: 8
+  gradient_accumulation_steps: 8
+  optimizer: AdamW
+  learning_rate: 0.000008
+  weight_decay: 0.000001
+  amsgrad: true
+  scheduler: ExponentialLR
+  scheduler_gamma: 0.999
+  cox_l2_coefficient: 0.0001
+  max_epochs: 30
+  minimum_epochs: 10
+  early_stopping_patience: 6
+  precision: float32
+  weighted_sampling: false
+  augmentation: none
+
+inference:
+  detector_checkpoint: checkpoints/knee_detector.pt
+  drscore_checkpoint: checkpoints/drscore_final.pt
+  detector_score_threshold: 0.5
+  detector_nms_threshold: 0.5
+  crop_margin_pixels: 10
+  patient_right_on_image_left: true
+  raw_score_min: -4.236161
+  raw_score_max: 3.5887303
+  clip_to_0_4: false
